@@ -6,7 +6,10 @@ System.Console.Write("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if (number < 0) { number *= -1; }
+
 System.Console.Write($"Цифры числа {number} в обратном порядке: ");
+
+if (number < 10) { System.Console.Write(number); }
 
 for (int i = 10; number != 0;)
 {
