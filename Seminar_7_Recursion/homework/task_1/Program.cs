@@ -10,22 +10,22 @@ class Program
         if (m < n) ShowNaturalNumbers(m + 1, n);
     }
 
-    public static void Main()
+    static void Main()
     {
         Error:
-        System.Console.Write("\nWrite the first number M: ");
+        System.Console.Write("\nWrite the first natural number M: ");
         int m = Convert.ToInt32(Console.ReadLine());
 
-        System.Console.Write("\nWrite the second number N: ");
+        System.Console.Write("\nWrite the second natural number N: ");
         int n = Convert.ToInt32(Console.ReadLine());
 
-        if (m > n)
+        if (m > n || m <= 0)
         {
-            System.Console.Write("\nError! The first number cannot be larger than the first. Write again.\n");
+            System.Console.Write("\nError! The numbers aren't natural. Write again.\n");
             goto Error;
         }
 
-        System.Console.Write("The natural numbers between the M and N: ");
+        System.Console.Write("\nThe natural numbers between the M and N: ");
         ShowNaturalNumbers(m, n);
     }
 }
